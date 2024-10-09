@@ -1,0 +1,41 @@
+
+class Person{   //Base class or parent class or super class
+	public int age;
+	public String name;
+	public String address;
+}
+
+class Student extends Person{  //Derived class or Child class
+	public int marks;
+	public String grade;
+	
+	Student(String name,String address,int marks,String grade,int age){ //Constructor
+		this.name = name;
+		this.address = address;
+		this.marks =marks;
+		this.grade = grade;
+		this.age = age;
+		
+	}
+	
+	
+	public void display() {
+		System.out.println("Name is "+name );
+		System.out.println("Age is "+age);
+		System.out.println("Address is "+address);
+		System.out.println("Marks is "+marks);
+		System.out.println("Grade is "+ grade);
+		return;
+	}
+}
+
+
+public class InheritenceEg {
+
+	public static void main(String[] args) {
+		Student s1 = new Student("Anshul","Delhi",90,"A+",21);
+		s1.display();
+		
+	}
+
+}
